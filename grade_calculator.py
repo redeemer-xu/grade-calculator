@@ -5,8 +5,15 @@ def get_scores():
     scores = []
     count = int(input("How many subjects? "))
     for i in range(count):
-        score = float(input(f"Grade for subject {i + 1}: "))
-        scores.append(score)
+        while True:
+            try:
+                score = float(input(f"Grade for subject {i + 1}: "))
+                if 0 <= score <= 100:
+                    scores.append(score)
+                    break
+                print("Grade must be between 0 and 100.")
+            except ValueError:
+                print("Please enter a number.")
     return scores
 
 
