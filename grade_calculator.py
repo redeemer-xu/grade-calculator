@@ -10,11 +10,25 @@ def get_scores():
     return scores
 
 
+def get_rating(average):
+    if average >= 90:
+        return "Excellent"
+    elif average >= 85:
+        return "Very Good"
+    elif average >= 80:
+        return "Good"
+    elif average >= PASSING_GRADE:
+        return "Satisfactory"
+    else:
+        return "Needs Improvement"
+
+
 def main():
     print("=== Grade Calculator ===")
     scores = get_scores()
     average = sum(scores) / len(scores)
     print(f"Average: {average:.2f}")
+    print(f"Rating: {get_rating(average)}")
 
     if average >= PASSING_GRADE:
         print("Remarks: PASSED")
