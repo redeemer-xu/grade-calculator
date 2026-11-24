@@ -1,6 +1,6 @@
 # Grade Calculator
 
-**Name:** Redeemer B. Aparece
+**Name:** Redeemer Baja Aparece
 
 **Section:** IT3R4
 
